@@ -6,7 +6,7 @@
     position: relative;
 }
   
-.headImg {                      /* Header Image */
+.headImg {                   /* Header Image */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -14,7 +14,7 @@
     height: 75%;
 }
 
-.headTxt {                      /* Text inside the header image */
+.headTxt {                   /* Text inside the header image */
     font-size: 1.65rem;
     position: absolute;
     bottom: 1.5%;
@@ -32,60 +32,75 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 2.5rem;            /* Footer height */
+    height: 2.5rem;         /* Footer height */
 }
 
 #myBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
+    display: none;          /* Hidden by default */
+    position: fixed;        /* Fixed/sticky position */
+    bottom: 20px;           /* Place the button at the bottom of the page */
+    right: 30px;            /* Place the button 30px from the right */
+    z-index: 99;            /* Make sure it does not overlap */
+    border: none;           /* Remove borders */
+    outline: none;          /* Remove outline */
     background-color: red; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 10px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
-  }
+    color: white;         /* Text color */
+    cursor: pointer;        /* Add a mouse pointer on hover */
+    padding: 15px;          /* Some padding */
+    border-radius: 10px;    /* Rounded corners */
+    font-size: 18px;        /* Increase font size */
+}
   
-  #myBtn:hover {
+#myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
-  }
+}
 
 /* Container for flexboxes */
 .row {
     display: flex;
     flex-wrap: wrap;
-  }
+}
   
-  /* Create four equal columns */
-  .column {
+/* Create four equal columns */
+.column {
     flex: 20%;
     padding: 20px;
-  }
-  
-  /***************** Media Queries  *****************/
+}
 
-  /* On screens that are 992px wide or less, go from four columns to two columns */
-  @media screen and (max-width: 992px) {
+.imgContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.item {
+    margin: 5px;
+}
+  
+/***************** Media Queries  *****************/
+
+@media screen and (max-width: 992px) {
+    /* On screens that are 992px wide or less, go from four columns to two columns */
     .column {
-      flex: 50%;
+        flex: 50%;
     }
 
     .headTxt {
         font-size: 1.2rem;
     }
-  }
+}
   
-  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
+    /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
     .row {
-      flex-direction: column;
+        flex-direction: column;
     }
     .headTxt {
         font-size: .8rem;
     }
-  }
+
+    .imgContainer {
+        justify-content: center;
+    }
+}
