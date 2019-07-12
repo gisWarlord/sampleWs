@@ -11,7 +11,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    height: 75%;
+    /* height: 65%; */
 }
 
 .headImg:hover {            /* Change the image in the header on hover */
@@ -81,7 +81,8 @@
 
 @media screen and (max-width: 992px) {
     /* On screens that are 992px wide or less, go from four columns to two columns */
-    .column {
+    .column,
+    .navbar-brand {
         flex: 50%;
         font-size:  80%;
     }
@@ -97,7 +98,8 @@
         flex-direction: column;
     }
 
-    .column {
+    .column,
+    .navbar-brand {
         font-size: 70%;
     }
 
