@@ -34,7 +34,7 @@
         <div class="container">
             <img class="headImg" src=".\img\LouisvilleSunRise.jpg" alt="Louisville Sun Rise">
             <div class="text-block">
-                <div class="headTxt">Welcome Photo Lovers</div>
+                <div class="headTxt">Welcome Photography Lovers</div>
             </div>
         </div>
 
@@ -140,7 +140,6 @@
                         <div class="col-xl-8 offset-xl-2 py-5">
                             <!-- form  -->
                             <form id="contact-form" method="post" action="contact.php" role="form">
-                                <div class="messages">This Form is under construction</div>
                                 <div class="controls">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -194,9 +193,10 @@
                         <div class="alert alert-warning" role="alert">
                             <strong>*</strong> These fields are required.
                         </div>
+                        <div id="frmMessage" class="messages" role="alert"></div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-dark" data-error="">Send Email</button>
+                        <button type="button" class="btn btn-dark btn-success btn-send" data-error="" onclick="sendFunction()">Send Email</button>
                         <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
                     </div>
                 </div>
