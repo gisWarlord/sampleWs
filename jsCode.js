@@ -26,3 +26,7 @@ function sendFunction() {
   $("#frmMessage").html("Under Construction");
   $("#frmMessage").delay(3000).fadeOut();
 }
+
+$('#modal-email').on('hidden.bs.modal', function () {
+  $(this).find('form').trigger('reset');
+})
